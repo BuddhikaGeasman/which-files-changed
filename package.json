@@ -23,5 +23,9 @@
   "lint-staged": {
     "src/**/*.{js,ts,jsx,tsx}": "prettier --write --ignore-unknown"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0"
+  }
 }
