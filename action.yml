@@ -1,0 +1,14 @@
+name: Files Changed
+description: Update PR description with changed files
+inputs:
+  token:
+    description: 'The GitHub token to use'
+    required: true
+    default: $
+  pr-comment:
+    description: 'Files changed get added to PR comment'
+    required: false
+   
+runs:
+  using: node20
+  main: dist/index.js 
