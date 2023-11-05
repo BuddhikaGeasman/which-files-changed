@@ -11,4 +11,8 @@ inputs:
    
 runs:
   using: node20
-  main: dist/index.js 
+  main: dist/index.js
+
+branding:
+  icon: edit-3
+  color: orange
