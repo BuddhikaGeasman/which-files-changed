@@ -9,7 +9,7 @@ import {
   parseDiff,
   updatePRDescription,
 } from './utils';
-const addChangedFiles = async () => {
+export const addChangedFiles = async () => {
   try {
     // get the inputs from the action
     const token = core.getInput('token', { required: true });
@@ -57,7 +57,9 @@ const addChangedFiles = async () => {
       // update the pr itself
       await updatePRDescription(
         { oktokit, owner, repoName, prNumber },
-        `${existingDescription}\n\n${updatedDescription}`,
+        `${
+          existingDescription ? existingDescription : ''
+        }\n\n${updatedDescription}`,
       );
       console.log('PR description has been updated');
     }
