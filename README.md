@@ -41,6 +41,10 @@ jobs:
 - `pr-comment` (optional): A boolean value ('true' or 'false') to determine whether to add the list of changed files as a comment on the pull request.
 - By default the action append the file changes as part of pr description.
 
+#### Example View:
+
+Checkout the [open pr](https://github.com/BuddhikaGeasman/which-files-changed/pull/1) where description has been updated with changed files.
+
 ## 👨‍💻 Contributing
 
 - The project is set up with [bun](https://bun.sh/)

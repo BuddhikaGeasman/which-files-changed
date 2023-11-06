@@ -29797,6 +29797,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.addChangedFiles = void 0;
 const core = __importStar(__nccwpck_require__(2186));
 const github_1 = __nccwpck_require__(5438);
 // @Utils
@@ -29834,7 +29835,7 @@ const addChangedFiles = async () => {
         }
         else {
             // update the pr itself
-            await (0, utils_1.updatePRDescription)({ oktokit, owner, repoName, prNumber }, `${existingDescription}\n\n${updatedDescription}`);
+            await (0, utils_1.updatePRDescription)({ oktokit, owner, repoName, prNumber }, `${existingDescription ? existingDescription : ''}\n\n${updatedDescription}`);
             console.log('PR description has been updated');
         }
     }
@@ -29842,7 +29843,8 @@ const addChangedFiles = async () => {
         core.setFailed(`An error occurred: ${error}`);
     }
 };
-addChangedFiles();
+exports.addChangedFiles = addChangedFiles;
+(0, exports.addChangedFiles)();
 
 
 /***/ }),
